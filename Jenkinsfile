@@ -6,10 +6,12 @@ pipeline {
 
     parameters {
 		      choice name:'Terraform_Cleanup', description:"What should be done?", choices:['NO','FULL', 'PARTIAL']
-			booleanParam name:"Terraform_Init", description:"Do you want to execute Terraform Init?", defaultValue:true
-			booleanParam name:"Terraform_Plan", description:"Do you want to execute Terraform Plan?", defaultValue:true
-			booleanParam name:"Terraform_Apply", description:"Do you want to execute Terraform Apply?", defaultValue:true
-			booleanParam name:"Terraform_Destroy", description:"Do you want to execute Terraform Destroy?", defaultValue:false   			
+		      booleanParam name:"Terraform_Init", description:"Do you want to execute Terraform Init?", defaultValue:true
+		      booleanParam name:"Terraform_Plan", description:"Do you want to execute Terraform Plan?", defaultValue:true
+		      booleanParam name:"Terraform_Apply", description:"Do you want to execute Terraform Apply?", defaultValue:true
+		      booleanParam name:"Terraform_Destroy", description:"Do you want to execute Terraform Destroy?", defaultValue:false 
+		      booleanParam name:'E_MAIL', description:"Create E_MAIL?", defaultValue:true
+		      string name:'E_MAIL_ADDRESS', description:"Recipient(s) of job status/result (comma or semicolon separated)", defaultValue:"itspushpaksworld496@gmail.com;"
                }
   
 
@@ -93,4 +95,26 @@ pipeline {
         
         
     }
+
+post {
+		success { 
+			script{
+			
+			if (params.E_MAIL)
+			{
+			
+			emailext to: "${E_MAIL_ADDRESS}",
+			subject: "Terraform Build successfully",
+           		body: ": Hello User,\n ${env.JOB_NAME} executed successfully. Refer this to know more: ${env.BUILD_URL}",
+			attachlog: true
+			attachmentsPattern: '*txt'
+
+			}  //end of if
+				
+			if (!params.E_MAIL){ echo "Mail not sent as \${E_MAIL} is unset"}
+				
+			}
+			
+		}
+	}
 }
