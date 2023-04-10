@@ -10,7 +10,9 @@ However, these credentials when passed in configuration files raise security con
 
 
 In order to overcome this situation, along with Terraform we will use:
+
 Hashicorp Vault: To store access_key and secret_key for AWS authentication.
+
 AWS Secrets manager: To store DB_username and DB_password.
 
 ---------------------------- ABOUT ----------------------------
