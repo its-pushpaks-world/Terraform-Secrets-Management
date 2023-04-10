@@ -45,14 +45,14 @@ pipeline {
                 '''
             }}
 
-        stage('Git Clone') {
+        /*stage('Git Clone') {
 
             when { expression { return params.Git_Clone } }
 
             steps {
                echo "----------------- Cloning Git Repository -----------------"
                git branch: 'main', credentialsId: 'gitCredentials', url: 'https://github.com/its-pushpaks-world/Terraform-Secrets-Management'
-            }}
+            }}*/
             
        stage('Terraform Init') {
 
