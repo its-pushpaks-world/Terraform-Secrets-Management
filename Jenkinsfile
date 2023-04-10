@@ -6,7 +6,6 @@ pipeline {
 
     parameters {
 		      choice name:'Terraform_Cleanup', description:"What should be done?", choices:['NO','FULL', 'PARTIAL']
-			booleanParam name:"Git_Clone", description:"Do you want to clone Git Repository?", defaultValue:true
 			booleanParam name:"Terraform_Init", description:"Do you want to execute Terraform Init?", defaultValue:true
 			booleanParam name:"Terraform_Plan", description:"Do you want to execute Terraform Plan?", defaultValue:true
 			booleanParam name:"Terraform_Apply", description:"Do you want to execute Terraform Apply?", defaultValue:true
