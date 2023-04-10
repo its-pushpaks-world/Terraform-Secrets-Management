@@ -1,6 +1,6 @@
 # Terraform-Secrets-Management
 
-PREFACE
+---------------------------- PREFACE ---------------------------- 
 
 Hashicorp’s Terraform is well known IaC tool and AWS is the most popular cloud provider.
 In order to be able to do IaC tasks on AWS infrastructure, Terraform needs AWS credentials (access_key and secret_key) which authenticates and helps Terraform manage AWS.
@@ -12,3 +12,11 @@ However, these credentials when passed in configuration files raise security con
 In order to overcome this situation, along with Terraform we will use:
 Hashicorp Vault: To store access_key and secret_key for AWS authentication.
 AWS Secrets manager: To store DB_username and DB_password.
+
+---------------------------- ABOUT ----------------------------
+Author: Pushpak Badadale
+Email ID: itspushpaksworld496@gmail.com
+LinkedIn ID: 
+Date: 2023-04-10 v1
+
+---------------------------- END OF README FILE ----------------------------
