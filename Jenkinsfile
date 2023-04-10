@@ -105,7 +105,7 @@ post {
 			
 			emailext to: "${E_MAIL_ADDRESS}",
 			subject: "Terraform Build successfully",
-           		body: ": Hello User,\n ${env.JOB_NAME} executed successfully. Refer this to know more: ${env.BUILD_URL}",
+           		body: ": Hello User,\n ${env.JOB_NAME} executed successfully. Refer this to know more: ${env.BUILD_URL}"
 			attachlog: true
 			attachmentsPattern: '*txt'
 
