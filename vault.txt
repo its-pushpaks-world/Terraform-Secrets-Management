@@ -1,1 +1,0 @@
-sudo netstat -tulpn
