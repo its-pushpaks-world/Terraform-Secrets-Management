@@ -1,0 +1,101 @@
+data.vault_generic_secret.demo: Reading...
+data.vault_generic_secret.demo: Read complete after 0s [id=secret/pushpak-aws]
+data.aws_secretsmanager_secret_version.creds: Reading...
+data.aws_secretsmanager_secret_version.creds: Read complete after 0s [id=MyDemoSecret|AWSCURRENT]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_db_instance.example will be created
+  + resource "aws_db_instance" "example" {
+      + address                               = (known after apply)
+      + allocated_storage                     = 10
+      + apply_immediately                     = false
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + backup_retention_period               = (known after apply)
+      + backup_window                         = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + character_set_name                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_name                               = "example"
+      + db_subnet_group_name                  = (known after apply)
+      + delete_automated_backups              = true
+      + endpoint                              = (known after apply)
+      + engine                                = "mysql"
+      + engine_version                        = "5.7"
+      + engine_version_actual                 = (known after apply)
+      + hosted_zone_id                        = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = (known after apply)
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.micro"
+      + iops                                  = (known after apply)
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      + license_model                         = (known after apply)
+      + listener_endpoint                     = (known after apply)
+      + maintenance_window                    = (known after apply)
+      + master_user_secret                    = (known after apply)
+      + master_user_secret_kms_key_id         = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + multi_az                              = (known after apply)
+      + name                                  = (known after apply)
+      + nchar_character_set_name              = (known after apply)
+      + network_type                          = (known after apply)
+      + option_group_name                     = (known after apply)
+      + parameter_group_name                  = (known after apply)
+      + password                              = (sensitive value)
+      + performance_insights_enabled          = false
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = (known after apply)
+      + publicly_accessible                   = false
+      + replica_mode                          = (known after apply)
+      + replicas                              = (known after apply)
+      + resource_id                           = (known after apply)
+      + skip_final_snapshot                   = false
+      + snapshot_identifier                   = (known after apply)
+      + status                                = (known after apply)
+      + storage_throughput                    = (known after apply)
+      + storage_type                          = (known after apply)
+      + tags_all                              = (known after apply)
+      + timezone                              = (known after apply)
+      + username                              = (sensitive value)
+      + vpc_security_group_ids                = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+aws_db_instance.example: Creating...
+aws_db_instance.example: Still creating... [10s elapsed]
+aws_db_instance.example: Still creating... [20s elapsed]
+aws_db_instance.example: Still creating... [30s elapsed]
+aws_db_instance.example: Still creating... [40s elapsed]
+aws_db_instance.example: Still creating... [50s elapsed]
+aws_db_instance.example: Still creating... [1m0s elapsed]
+aws_db_instance.example: Still creating... [1m10s elapsed]
+aws_db_instance.example: Still creating... [1m20s elapsed]
+aws_db_instance.example: Still creating... [1m30s elapsed]
+aws_db_instance.example: Still creating... [1m40s elapsed]
+aws_db_instance.example: Still creating... [1m50s elapsed]
+aws_db_instance.example: Still creating... [2m0s elapsed]
+aws_db_instance.example: Still creating... [2m10s elapsed]
+aws_db_instance.example: Still creating... [2m20s elapsed]
+aws_db_instance.example: Still creating... [2m30s elapsed]
+aws_db_instance.example: Still creating... [2m40s elapsed]
+aws_db_instance.example: Still creating... [2m50s elapsed]
+aws_db_instance.example: Still creating... [3m0s elapsed]
+aws_db_instance.example: Still creating... [3m10s elapsed]
+aws_db_instance.example: Still creating... [3m20s elapsed]
+aws_db_instance.example: Still creating... [3m30s elapsed]
+aws_db_instance.example: Still creating... [3m40s elapsed]
+aws_db_instance.example: Still creating... [3m50s elapsed]
+aws_db_instance.example: Still creating... [4m0s elapsed]
+aws_db_instance.example: Still creating... [4m10s elapsed]
+aws_db_instance.example: Creation complete after 4m15s [id=terraform-20230410111925545400000001]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
