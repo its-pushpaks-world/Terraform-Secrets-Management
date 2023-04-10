@@ -14,9 +14,14 @@ Hashicorp Vault: To store access_key and secret_key for AWS authentication.
 AWS Secrets manager: To store DB_username and DB_password.
 
 ---------------------------- ABOUT ----------------------------
+
 Author: Pushpak Badadale
+
 Email ID: itspushpaksworld496@gmail.com
+
 LinkedIn ID: 
+
 Date: 2023-04-10 v1
+
 
 ---------------------------- END OF README FILE ----------------------------
