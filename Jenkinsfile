@@ -105,9 +105,9 @@ post {
 			
 			emailext to: "${E_MAIL_ADDRESS}",
 			subject: "Terraform Build successfully",
-           		body: "Hello User,\n\n Job ${env.JOB_NAME} executed successfully. \nRefer this URL to know more: ${env.BUILD_URL}"
+           		body: "Hello User,\n\nJob ${env.JOB_NAME} executed successfully. \nRefer this URL to know more: ${env.BUILD_URL}"
 			attachlog: true
-			attachmentsPattern: '*.log'
+			attachmentsPattern: "tf_jenkins.log"
 
 			}  //end of if
 				
