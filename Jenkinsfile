@@ -29,6 +29,7 @@ pipeline {
                 rm -rf .terraform*
                 rm -rf terraform.*
                 ls -lart
+		echo "Full Cleanup finished" >> tf_jenkins.log
                 '''
             }}
             
@@ -43,6 +44,7 @@ pipeline {
                 ls -lart
                 rm -rf .terraform*
                 ls -lart
+		echo "Partial Cleanup finished" >> tf_jenkins.log
                 '''
             }}
 
@@ -62,6 +64,7 @@ pipeline {
             steps {
                 echo "----------------- Initialising using TERRAFORM INIT -----------------"
                 sh 'terraform init'
+		echo "Intialized using TERRAFORM INIT" >> tf_jenkins.log
                }
             }
             
@@ -73,6 +76,7 @@ pipeline {
             steps {
                 echo "----------------- Dry run using TERRAFORM PLAN -----------------"
                 sh 'terraform plan'
+		echo "Dry run using TERRAFORM PLAN" >> tf_jenkins.log
             }}
             
         stage('Terraform Apply') {
@@ -82,6 +86,7 @@ pipeline {
             steps {
                 echo "----------------- Creating Infrastructure using TERRAFORM APPLY -----------------"
                 sh 'terraform apply --auto-approve'
+		echo "Created Infrastructure using TERRAFORM APPLY" >> tf_jenkins.log
             }}
             
          stage('Terraform Destroy') {
@@ -91,6 +96,7 @@ pipeline {
             steps {
                 echo "----------------- Destroying Infrastructure using TERRAFORM DESTROY -----------------"
                 sh 'terraform destroy --auto-approve'
+		echo "Destroying Infrastructure using TERRAFORM DESTROY" >> tf_jenkins.log
             }}       
         
         
